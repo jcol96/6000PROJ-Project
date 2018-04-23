@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/XYZTravel/currencyConversion?WSDL" uri="src/conf/xml-resources/web-services/currency/wsdl/localhost_8080/XYZTravel/currencyConversion.wsdl"/>
+    <system systemId="http://localhost:8080/XYZTravel/currencyConversion?xsd=1" uri="src/conf/xml-resources/web-services/currency/wsdl/localhost_8080/XYZTravel/currencyConversion.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/XYZTravel/currency?WSDL" uri="src/conf/xml-resources/web-service-references/currency/wsdl/localhost_8080/XYZTravel/currency.wsdl"/>
+    <system systemId="http://localhost:8080/XYZTravel/currency?xsd=1" uri="src/conf/xml-resources/web-service-references/currency/wsdl/localhost_8080/XYZTravel/currency.xsd_1.xsd"/>
+</catalog>

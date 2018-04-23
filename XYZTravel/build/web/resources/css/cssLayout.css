@@ -1,0 +1,326 @@
+#top {
+    background-color: #222222;
+    padding: 5px;
+    margin: 40px 0px 0px 0px;
+    text-align: center;
+    border-bottom: 3px solid;
+    border-bottom-color: #001555;
+    width: 100%;
+}
+#bottom {
+    position: relative;
+    background-color: #c2dfef;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+}
+#left {
+    float: left;
+    background-color: lightgrey;
+    color:#0E4300;
+    padding: 5px;
+    width: 150px;
+}
+#right {
+    float: right;
+    background-color: #007536;
+    padding: 5px;
+    width: 150px;
+    color:white; 
+}
+.center_content {
+    position: relative;
+    background-color: #dddddd;
+    padding: 5px;
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%; 
+}
+.left_content {
+    overflow: auto;
+    background-color: #F6F6F6;
+    color: black;
+    padding: 30px;
+    margin-top:10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
+}
+.right_content {
+    background-color: #dddddd;
+    padding: 5px;
+    margin: 0px 170px 0px 170px;
+    color: white; 
+}
+#right a:link, #top a:visited {
+  color: white;
+  font-weight : bold;
+  text-decoration: none;
+}
+#right a:link:hover, #top a:visited:hover  {
+  color: black;
+  font-weight : bold;
+  text-decoration : underline;
+}
+#h3{
+   font-size: 50pt; 
+}
+#h4{
+   font-size: 40pt; 
+}
+#nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 40px;
+}
+#nav li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+#nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#flight, #train, #bus{
+    color: white;
+}
+/* Change the link color to #111 (black) on hover */
+#nav li a:hover {
+    background-color: #111;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+#nav .active {
+    background-color: #006011;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+#nav li:last-child {
+    border-right: none;
+    border-left: 1px solid #bbb;
+}
+.homeButtons{
+    background-color: #006011;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s; 
+}
+.homeButtons:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out; 
+}
+.cityimg{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height:200px;
+}
+.ljmu{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height:100px;
+    border-radius: 20px;
+}
+ #map {
+   width: 100%;
+   height: 400px;
+   background-color: grey;
+ }
+ /* Vehicles page */
+ #vehicleBar{
+     margin:10px;
+     padding: 20px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     border: 2px solid #001555;
+     color:#001555;
+     border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+ }
+ .vehicleButtons{
+    background-color: #006011;
+    background-color: #001555;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+vehicleButtons:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/* login page */
+#loginPage{
+    display: inline-block;
+    margin-top: 10%;
+}
+#username{
+    
+}
+
+#password{
+    margin-bottom: 50px;
+}
+#loginContainer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px 50px;
+    background-color: #00434d;
+    display: inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    width:30%;
+    box-shadow: 
+        0 1px 2px #fff, /*bottom external highlight*/
+        0 -1px 1px #666, /*top external shadow*/ 
+        inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+        inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+}
+#regContainer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px 50px;
+    background-color: #00434d;
+    display: inline-block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    width:60%;
+    box-shadow: 
+        0 1px 2px #fff, /*bottom external highlight*/
+        0 -1px 1px #666, /*top external shadow*/ 
+        inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+        inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+}
+#adminContainer{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 15px 50px;
+    background-color: #00434d;
+    display: block;
+    margin-left:0;
+    margin-right:auto;
+    text-align: center;
+    width:30%;
+    box-shadow: 
+        0 1px 2px #fff, /*bottom external highlight*/
+        0 -1px 1px #666, /*top external shadow*/ 
+        inset 0 -1px 1px rgba(0,0,0,0.5), /*bottom internal shadow*/ 
+        inset 0 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+}
+#registerSubmit{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.normalForm{
+    width: 500px;
+    padding-left: 0px;
+}
+.profileContainer{
+    display: inline-block;
+    border-radius: 15px 50px;
+    background-color: #00434d;
+    width: 200px;
+    text-align: center
+}
+.bookingtable{
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.bookingtable th, td {
+    text-align: center;
+    padding: 8px;
+}
+.logintable{
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.logintable th, td {
+    text-align: center;
+    padding: 8px;
+}
+.vehicletable{
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.vehicletable th, td {
+    text-align: center;
+    padding: 8px;
+}
+.bookingtable tr:nth-child(even){background-color: #d6d6d6}
+.logintable tr:nth-child(even){background-color: #d6d6d6}
+.vehicletable tr:nth-child(even){background-color: #d6d6d6}
+.bookingtable tr:hover {background-color:#bcbcbc;}
+.vehicletable tr:hover {background-color:#bcbcbc;}
+
+.bookingtable th {
+    background-color: #006011;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.logintable th {
+    background-color: #00434d;;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.vehicletable th {
+    background-color: #006011;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.vehicletable th {
+    background-color: #001555;;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}

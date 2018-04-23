@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body>
+        <ui:composition template="./template.xhtml">
+            <ui:define name="top">
+            </ui:define>
+            <ui:define name="content">
+                <h2>Flights</h2>
+                <h2><h:outputText value="All Flights" /></h2>
+                <h:form>
+                    <f:view>
+                        <h:dataTable class="bookingtable" value="#{xyzBean.flightList}" var="fli" border="1" cellpadding="10">
+                            <h:column>
+                                <f:facet name="header">
+                                    ID
+                                </f:facet>
+                                    #{fli.flightId}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    From
+                                </f:facet>
+                                    #{fli.flightFrom}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                   To
+                                </f:facet>
+                                   #{fli.flightTo}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Date
+                                </f:facet>
+                                    <h:outputText value="#{fli.flightDate}" >
+                                        <f:convertDateTime pattern="dd.MM.yyyy" />
+                                    </h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Departure
+                                </f:facet>
+                                    <h:outputText value="#{fli.flightDepart}" >
+                                        <f:convertDateTime pattern="HH:mm" />
+                                    </h:outputText>
+                            </h:column>
+                           <h:column>
+                                <f:facet name="header">
+                                    Arrival
+                                </f:facet>
+                                    <h:outputText value="#{fli.flightArrival}" >
+                                        <f:convertDateTime pattern="HH:mm" />
+                                    </h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Price
+                                </f:facet>
+                                    £ #{fli.flightPrice}
+                            </h:column>
+                            <h:column>
+                                <h:commandLink onclick="if (! confirm('Please take note of the Vehicle ID, you will need this next')) return false" 
+                                       value="Book" 
+                                       action= "booking.xhtml">
+                                 </h:commandLink>
+                            </h:column>
+                        </h:dataTable>
+                    </f:view>
+                </h:form>
+           </ui:define>
+        </ui:composition>
+    </body>
+</html>
+

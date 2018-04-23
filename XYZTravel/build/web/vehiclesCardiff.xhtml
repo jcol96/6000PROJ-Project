@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body>
+        <ui:composition template="./template.xhtml">
+            <ui:define name="top">
+            </ui:define>
+            <ui:define name="content">
+                <h2>Cardiff Vehicles</h2>
+                <h3>Welcome to XYZ travel, the place where you can choose what you need when travelling.</h3>
+                <br></br>
+                <h:form>
+                    <f:view>
+                        <h:dataTable class="vehicletable" value="#{xyzBean.vehiclesCardiffList}" var="item" border="1" cellpadding="10">
+                            <h:column>
+                                <f:facet name="header">
+                                    Location
+                                </f:facet>
+                                    #{item.vehicleLocation}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Type
+                                </f:facet>
+                                    #{item.vehicleType}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                   Make
+                                </f:facet>
+                                   #{item.vehicleMake}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Model
+                                </f:facet>
+                                    #{item.vehicleModel}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">
+                                    Price
+                                </f:facet>
+                                    £ #{item.vehiclePrice}
+                            </h:column>
+                           <h:column>
+                                <f:facet name="header">
+                                    Quantity
+                                </f:facet>
+                                    #{item.vehicleQuantity}
+                            </h:column>
+                            <h:column>
+                                <h:commandLink onclick="if (! confirm('Please take note of the Vehicle ID, you will need this next')) return false" 
+                                       value="Book" 
+                                       action= "booking.xhtml">
+                                 </h:commandLink>
+                            </h:column>
+                        </h:dataTable>
+                    </f:view>
+                </h:form>
+           </ui:define>
+        </ui:composition>
+    </body>
+</html>
+

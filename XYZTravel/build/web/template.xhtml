@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <h:outputStylesheet name="/css/default.css"/>
+        <h:outputStylesheet name="/css/cssLayout.css"/>
+        <link rel="icon" type="image/x-icon" href="#{resource['images/favicon.ico']}" />
+        <title>XYZ travel</title>
+    </h:head>
+    <h:body>
+        <div id="nav" class="nav">
+            <ul>
+                <li><h:form><h:commandLink value="Home" action="index?faces-redirect=true" 
+                                       style="text-decoration:none;color:white"/></h:form></li>
+                <li><h:form><h:commandLink value="Flight" action="flight.jsp" 
+                                       style="text-decoration:none;color:white"/></h:form></li>
+                <li><h:form><h:commandLink value="Train" action="train.jsp" 
+                                       style="text-decoration:none;color:white"/></h:form></li>
+                <li><h:form><h:commandLink value="Bus" action="bus.jsp" 
+                                       style="text-decoration:none;color:white"/></h:form></li>                          
+                <li><h:form><h:commandLink value="Vehicle Hire" action="vehicle?faces-redirect=true" 
+                                       style="text-decoration:none;color:white"/></h:form></li>
+                <li><h:form><h:commandLink value="City Information" action="city?faces-redirect=true" 
+                                       style="text-decoration:none;color:white"/></h:form></li>
+                <li><h:form><h:commandLink value="Locations" action="locations.html" 
+                                       style="text-decoration:none;color:white"/></h:form></li>
+                <li><h:form><h:outputLink value="http://localhost:8080/XYZTravel/currency?Tester" 
+                                          style="text-decoration:none;color:white">
+                            <h:outputText value="Converter"/>
+                        </h:outputLink></h:form></li>
+                <li><h:form><h:commandLink value="About" action="about?faces-redirect=true" 
+                                       style="text-decoration:none;color:white"/></h:form></li>                       
+                <li style="float:right"><h:form><h:commandLink value="Account" class="active" action="login.jsp" 
+                                       style="text-decoration:none;color:white;float:right;"/></h:form></li>                           
+            </ul>
+        </div>
+        <div id="top" class="top">
+            <a href="index.xhtml"><h:graphicImage name="images/banner-alt.png" alt="XYZ travel" height="150"/></a>
+        </div>
+        <div>
+            <div id="homeContent">
+                <div id="content" class="left_content">
+                    <ui:insert name="content">Content</ui:insert>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body>
+        <ui:composition template="./template.xhtml">
+            <ui:define name="top">
+            </ui:define>
+            <ui:define name="content">
+                <h2>Vehicle Hire</h2>
+                <br/>
+                <h3>
+                    Click <a href="vehiclesL.xhtml">here</a> to see all available vehicles
+                </h3>
+                <p>
+                    Select a location to collect your vehicle<br></br>
+                </p>
+                <div id="vehicleBar">
+                    <h2>Belfast</h2>
+                    <p>Select the button below to view all vehicles available in Belfast</p>
+                    <h:form>
+                    <h:commandButton action="vehiclesBelfast.xhtml" class="vehicleButtons" value="Belfast Vehicles"/>
+                    </h:form>
+                </div>
+                <div id="vehicleBar">
+                    <h2>Cardiff</h2>
+                    <p>Select the button below to view all vehicles available in Cardiff</p>
+                    <h:form>
+                    <h:commandButton action="vehiclesCardiff.xhtml" class="vehicleButtons" value="Cardiff Vehicles"/>
+                    </h:form>
+                </div>
+                <div id="vehicleBar">
+                    <h2>Edinburgh</h2>
+                    <p>The capital of Scotland, so many historic sights to see. Hire a vehicle in Edinburgh and explore more. <br/>
+                        Select the button below to view all vehicles available in Edinburgh</p>
+                    <h:form>
+                    <h:commandButton action="vehiclesEdinburgh.xhtml" class="vehicleButtons" value="Edinburgh Vehicles"/>
+                    </h:form>
+                </div>
+                <div id="vehicleBar">
+                    <h2>London</h2>
+                    <p>The largest amount of vehicles are available in London, to be ensure you can secure the vehicle you need. <br/>
+                        Select the button below to view all vehicles available in London</p>
+                    <h:form>
+                    <h:commandButton action="vehiclesLondon.xhtml" class="vehicleButtons" value="London Vehicles"/>
+                    </h:form>
+                </div>
+                <div id="vehicleBar">
+                    <h2>Manchester</h2>
+                    <p>Select the button below to view all vehicles available in Manchester</p>
+                    <h:form>
+                    <h:commandButton action="vehiclesManchester.xhtml" class="vehicleButtons" value="Manchester Vehicles"/>
+                    </h:form>
+                </div>
+                <div id="vehicleBar">
+                    <h2>Isle of Man</h2>
+                    <p>Well renowned for motorcycles, you are able to join the action by hiring a motorcycle in the Isle of Man with XYZ Travel. <br/>
+                        Select the button below to view all vehicles available in Isle of Man</p>
+                    <h:form>
+                    <h:commandButton action="vehiclesIsleofMan.xhtml" class="vehicleButtons" value="Isle of Man Vehicles"/>
+                    </h:form>
+                </div>
+           </ui:define>
+        </ui:composition>
+    </body>
+</html>

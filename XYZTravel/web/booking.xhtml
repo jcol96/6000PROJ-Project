@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body>
+        <ui:composition template="./template.xhtml">
+            <ui:define name="top">
+            </ui:define>
+            <ui:define name="content">
+                <h2>Booking</h2>
+               <br></br>
+                <h:form>
+                    <h:panelGrid class="bookingtable" columns="2" border="1" cellpadding="10">
+                        <f:facet name="header">
+                            <h:outputText value="Please confirm the ID's of the desired transport your require, leave blank if not required"/>
+                        </f:facet>
+                        <h:outputText value="Flight ID: "/>
+                        <h:inputText value="#{xyzBean.inFlight}"/>
+                        <h:outputText value="Train ID: "/>
+                        <h:inputText value="#{xyzBean.inTrain}"/>
+                        <h:outputText value="Bus ID: "/>
+                        <h:inputText value="#{xyzBean.inBus}"/> 
+                        <h:outputText value="Vehicle ID: "/>
+                        <h:inputText value="#{xyzBean.inVehicle}"/>
+                        <h:outputText value="Confirm your email: "/>
+                        <h:inputText value="#{xyzBean.inEmail}"/> 
+                        <f:facet name="footer">
+                            <h:commandButton onclick="if (! confirm('You are about to confirm this lesson booking')) return false" 
+                                             value="Confirm Booking"
+                                             action="#{xyzBean.completeBooking}"
+                                             styleClass="homeButtons">
+                            </h:commandButton> 
+                        </f:facet> 
+                    </h:panelGrid>
+                </h:form>     
+           </ui:define>
+        </ui:composition>
+    </body>
+</html>
+

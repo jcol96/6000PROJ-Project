@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://webservices/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://webservices/">
+
+<xs:element name="dollarsToEuros" type="tns:dollarsToEuros"/>
+
+<xs:element name="dollarsToEurosResponse" type="tns:dollarsToEurosResponse"/>
+
+<xs:element name="dollarsToNairas" type="tns:dollarsToNairas"/>
+
+<xs:element name="dollarsToNairasResponse" type="tns:dollarsToNairasResponse"/>
+
+<xs:element name="dollarsToPounds" type="tns:dollarsToPounds"/>
+
+<xs:element name="dollarsToPoundsResponse" type="tns:dollarsToPoundsResponse"/>
+
+<xs:element name="dollarsToRupees" type="tns:dollarsToRupees"/>
+
+<xs:element name="dollarsToRupeesResponse" type="tns:dollarsToRupeesResponse"/>
+
+<xs:element name="eurosToDollars" type="tns:eurosToDollars"/>
+
+<xs:element name="eurosToDollarsResponse" type="tns:eurosToDollarsResponse"/>
+
+<xs:element name="eurosToNairas" type="tns:eurosToNairas"/>
+
+<xs:element name="eurosToNairasResponse" type="tns:eurosToNairasResponse"/>
+
+<xs:element name="eurosToPounds" type="tns:eurosToPounds"/>
+
+<xs:element name="eurosToPoundsResponse" type="tns:eurosToPoundsResponse"/>
+
+<xs:element name="eurosToRupees" type="tns:eurosToRupees"/>
+
+<xs:element name="eurosToRupeesResponse" type="tns:eurosToRupeesResponse"/>
+
+<xs:element name="nairasToDollars" type="tns:nairasToDollars"/>
+
+<xs:element name="nairasToDollarsResponse" type="tns:nairasToDollarsResponse"/>
+
+<xs:element name="nairasToEuros" type="tns:nairasToEuros"/>
+
+<xs:element name="nairasToEurosResponse" type="tns:nairasToEurosResponse"/>
+
+<xs:element name="nairasToPounds" type="tns:nairasToPounds"/>
+
+<xs:element name="nairasToPoundsResponse" type="tns:nairasToPoundsResponse"/>
+
+<xs:element name="nairasToRupees" type="tns:nairasToRupees"/>
+
+<xs:element name="nairasToRupeesResponse" type="tns:nairasToRupeesResponse"/>
+
+<xs:element name="poundsToDollars" type="tns:poundsToDollars"/>
+
+<xs:element name="poundsToDollarsResponse" type="tns:poundsToDollarsResponse"/>
+
+<xs:element name="poundsToEuros" type="tns:poundsToEuros"/>
+
+<xs:element name="poundsToEurosResponse" type="tns:poundsToEurosResponse"/>
+
+<xs:element name="poundsToNairas" type="tns:poundsToNairas"/>
+
+<xs:element name="poundsToNairasResponse" type="tns:poundsToNairasResponse"/>
+
+<xs:element name="poundsToRupees" type="tns:poundsToRupees"/>
+
+<xs:element name="poundsToRupeesResponse" type="tns:poundsToRupeesResponse"/>
+
+<xs:element name="rupeesToDollars" type="tns:rupeesToDollars"/>
+
+<xs:element name="rupeesToDollarsResponse" type="tns:rupeesToDollarsResponse"/>
+
+<xs:element name="rupeesToEuros" type="tns:rupeesToEuros"/>
+
+<xs:element name="rupeesToEurosResponse" type="tns:rupeesToEurosResponse"/>
+
+<xs:element name="rupeesToNairas" type="tns:rupeesToNairas"/>
+
+<xs:element name="rupeesToNairasResponse" type="tns:rupeesToNairasResponse"/>
+
+<xs:element name="rupeesToPounds" type="tns:rupeesToPounds"/>
+
+<xs:element name="rupeesToPoundsResponse" type="tns:rupeesToPoundsResponse"/>
+
+<xs:complexType name="nairasToDollars">
+<xs:sequence>
+<xs:element name="nairas" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nairasToDollarsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eurosToPounds">
+<xs:sequence>
+<xs:element name="euros" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eurosToPoundsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rupeesToEuros">
+<xs:sequence>
+<xs:element name="rupees" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rupeesToEurosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rupeesToPounds">
+<xs:sequence>
+<xs:element name="rupees" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rupeesToPoundsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nairasToPounds">
+<xs:sequence>
+<xs:element name="nairas" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nairasToPoundsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="poundsToDollars">
+<xs:sequence>
+<xs:element name="pounds" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="poundsToDollarsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rupeesToDollars">
+<xs:sequence>
+<xs:element name="rupees" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rupeesToDollarsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nairasToEuros">
+<xs:sequence>
+<xs:element name="nairas" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nairasToEurosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dollarsToEuros">
+<xs:sequence>
+<xs:element name="dollars" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dollarsToEurosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eurosToRupees">
+<xs:sequence>
+<xs:element name="euros" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eurosToRupeesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dollarsToRupees">
+<xs:sequence>
+<xs:element name="dollars" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dollarsToRupeesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eurosToDollars">
+<xs:sequence>
+<xs:element name="euros" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eurosToDollarsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="poundsToNairas">
+<xs:sequence>
+<xs:element name="pounds" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="poundsToNairasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dollarsToPounds">
+<xs:sequence>
+<xs:element name="dollars" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dollarsToPoundsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rupeesToNairas">
+<xs:sequence>
+<xs:element name="rupees" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rupeesToNairasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eurosToNairas">
+<xs:sequence>
+<xs:element name="euros" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eurosToNairasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dollarsToNairas">
+<xs:sequence>
+<xs:element name="dollars" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dollarsToNairasResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="poundsToRupees">
+<xs:sequence>
+<xs:element name="pounds" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="poundsToRupeesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="poundsToEuros">
+<xs:sequence>
+<xs:element name="pounds" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="poundsToEurosResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nairasToRupees">
+<xs:sequence>
+<xs:element name="nairas" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="nairasToRupeesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

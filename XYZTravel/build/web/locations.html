@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Locations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <link rel="stylesheet" type="text/css" href="resources/css/cssLayout.css">
+        <link rel="stylesheet" type="text/css" href="resources/css/default.css">
+        <link rel="shortcut icon" type="image/png" href="resources/images/favicon.ico"/>
+    </head>
+    <body>
+        <div id="nav" class="nav">
+            <ul>
+                <li><form><a href="index.xhtml" style="text-decoration:none;color:white">Home</a></form></li>
+                <li><form><a href="flight.jsp" style="text-decoration:none;color:white">Flight</a></form></li>
+                <li><form><a href="train.jsp" style="text-decoration:none;color:white">Train</a></form></li>
+                <li><form><a href="bus.jsp" style="text-decoration:none;color:white">Bus</a></form></li>
+                <li><form><a href="vehicle.xhtml" style="text-decoration:none;color:white">Vehicle Hire</a></form></li>
+                <li><form><a href="city.xhtml" style="text-decoration:none;color:white">City Information</a></form></li>
+                <li><form><a href="locations.html" style="text-decoration:none;color:white">Locations</a></form></li>
+                <li><form><a href="http://localhost:8080/XYZTravel/currency?Tester" style="text-decoration:none;color:white">Converter</a></form></li>
+                <li><form><a href="about.xhtml" style="text-decoration:none;color:white">About</a></form></li>
+                <li style="float:right"><form><a href="login.jsp" class="active" style="text-decoration:none;color:white;float:right;">Account</a></form></li>
+            </ul>
+        </div>
+        <div id="top">
+            <a href="index.xhtml"><img src="resources/images/banner-alt.png" alt="XYZ travel" height="150"></a>
+        </div>
+        
+        <div id="content" class="left_content">
+            <style>
+                #map {
+                    padding-top:50px;
+                    height: 500px;
+                    display: block;
+                }
+            </style>
+            <h2>Locations</h2>
+            <div id="map"></div>
+            <script>
+                function initMap() {
+                    var bounds = new google.maps.LatLngBounds;
+                    var markersArray = [];
+                    var origin1 = 'London, England'; 
+                    var origin2 = 'Manchester, England'; 
+                    var origin3 = 'Cardiff, Wales';
+                    var origin4 = 'Liverpool, England'; 
+                    var origin5 = 'Edinburgh, Scotland'; 
+                    var origin6 = 'Glasgow, Scotland';
+                    var origin7 = 'Belfast, Northern Ireland';       
+                    var destination1 = 'London, England'; 
+                    var destination2 = 'Manchester, England'; 
+                    var destination3 = 'Cardiff, Wales';
+                    var destination4 = 'Liverpool, England'; 
+                    var destination5 = 'Edinburgh, Scotland'; 
+                    var destination6 = 'Glasgow, Scotland';
+                    var destination7 = 'Belfast, Northern Ireland'; 
+                    var destinationIcon = 'https://chart.googleapis.com/chart?' +
+                            'chst=d_map_pin_letter&chld=D|FF0000|000000';
+                    var originIcon = 'https://chart.googleapis.com/chart?' +
+                            'chst=d_map_pin_letter&chld=O|FFFF00|000000';
+                    
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        center: origin2,
+                        zoom: 2
+                    });
+                    var geocoder = new google.maps.Geocoder;
+                    var service = new google.maps.DistanceMatrixService;
+                    service.getDistanceMatrix({
+                        origins: [origin1, origin2, origin3, origin4, origin5, origin6, origin7], 
+                        destinations: [destination1, destination2, destination3, destination4, 
+                            destination5, destination6, destination7],
+                        travelMode: 'DRIVING',
+                        unitSystem: google.maps.UnitSystem.IMPERIAL,
+                        avoidHighways: false,
+                        avoidTolls: false
+                    }, function(response, status) {
+                        if (status !== 'OK') {
+                            alert('Error was: ' + status);
+                        } else {
+                            var originList = response.originAddresses;
+                            var destinationList = response.destinationAddresses;
+                            var outputDiv = document.getElementById('output');
+                            outputDiv.innerHTML = '';
+                            deleteMarkers(markersArray);
+                            
+                            var showGeocodedAddressOnMap = function(asDestination) {
+                                var icon = asDestination ? destinationIcon : originIcon;
+                                return function(results, status) {
+                                    if (status === 'OK') {
+                                        map.fitBounds(bounds.extend(results[0].geometry.location));
+                                        markersArray.push(new google.maps.Marker({
+                                            map: map,
+                                            position: results[0].geometry.location,
+                                            icon: icon
+                                        }));
+                                    } else {
+                                        // alert('Geocode was not successful due to: ' + status);
+                                    }
+                                };
+                            };
+                            for (var i = 0; i < originList.length; i++) {
+                                var results = response.rows[i].elements;
+                                geocoder.geocode({'address': originList[i]},
+                                showGeocodedAddressOnMap(false));
+                                for (var j = 0; j < results.length; j++) {
+                                    geocoder.geocode({'address': destinationList[j]},
+                                    showGeocodedAddressOnMap(true));
+                                    outputDiv.innerHTML += originList[i] + ' to ' + destinationList[j] +
+                                            ': ' + results[j].distance.text + ' in ' +
+                                            results[j].duration.text + '<br>';
+                                }
+                            }
+                        }
+                    });
+                }
+                function deleteMarkers(markersArray) {
+                    for (var i = 0; i < markersArray.length; i++) {
+                        markersArray[i].setMap(null);
+                    }
+                    markersArray = [];
+                }
+                
+            </script>
+            <br/>
+            <div><strong>Driving times between popular UK cities</strong></div>
+            <br/>
+            <div id="output"></div>
+            </div>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8SZMW91VTuOKc62TqV_zn2VQHg3YiR5k&callback=initMap">
+            </script>
+    </body>
+</html>
